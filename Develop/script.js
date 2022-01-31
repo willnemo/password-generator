@@ -6,6 +6,8 @@ var generateBtn = document.querySelector("#generate");
 
 getCriteria();
 
+
+//obtain binary answer to inclsuion of character types
 function getCriteria()
 {
   includeLowerCase = window.prompt("Would you like to include lowercase letters in your password? type 1 for yes or 2 for no. ");
@@ -40,6 +42,7 @@ function getCriteria()
   includeSpecial = window.prompt("Invalid input - try again. type 1 for yes or 2 for no. ");
   }
 
+  //redo criteria loop if user rejects all characters
  if (includeLowerCase==2 && includeUpperCase ==2 && includeNumeric==2 && includeSpecial==2)
  {
   window.alert("Password must contain at least one character type. Please start over");
@@ -55,6 +58,8 @@ if (length > 7 && length < 125)
 length = window.prompt("Invalid input - try again. Must be 8-124 ");
 }
 
+
+//add character user accepted
 buildCharSet();
 function buildCharSet()
 {
